@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE configuration  
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">  
+<configuration>  
+    <!-- 对事务的管理和连接池的配置 -->  
+    <environments default="development">  
+        <environment id="development">  
+            <transactionManager type="JDBC" />  
+            <dataSource type="POOLED">  
+                <property name="driver" value="com.mysql.jdbc.Driver" />  
+                <property name="url" value="jdbc:mysql://192.168.1.87:3306/ld_wenbo_pingtai?useUnicode=true" />  
+                <property name="username" value="root" />  
+                <property name="password" value="root" />  
+            </dataSource>  
+        </environment>  
+    </environments>  
+      
+    <!-- mapping 文件路径配置 -->  
+    <mappers>  
+        <mapper resource="com/ld/audience/mapper/TicketBookingStatisticMapper.xml" />  
+    </mappers>  
+</configuration> 
